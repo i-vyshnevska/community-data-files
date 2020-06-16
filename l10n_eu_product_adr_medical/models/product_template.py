@@ -13,9 +13,6 @@ class ProductTemplate(models.Model):
         string="Dangerous Class",
     )
     un_number = fields.Char(string="UN Number", size=4)
-    # un_description = fields.Char(string="UN Description")
-    # flash_point = fields.Char(string="Flash Point")
-    # storage_temp = fields.Many2one('storage.temperature', string='Storage Temperature')
     is_dangerous_good = fields.Boolean(help="This product belongs to a dangerous class")
     is_dangerous_waste = fields.Boolean(
         help="Waste from this product belongs to a dangerous class"
