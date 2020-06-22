@@ -7,11 +7,6 @@ from odoo.exceptions import ValidationError
 class ProductTemplate(models.Model):
     _inherit = "product.template"
 
-    dangerous_class_id = fields.Many2one(
-        comodel_name="product.dangerous.class",
-        ondelete="restrict",
-        string="Dangerous Class",
-    )
     un_number = fields.Char(string="UN Number", size=4)
     is_dangerous_good = fields.Boolean(help="This product belongs to a dangerous class")
     is_dangerous_waste = fields.Boolean(
